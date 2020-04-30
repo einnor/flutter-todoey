@@ -29,11 +29,11 @@ class _TasksScreenState extends State<TasksScreen> {
                 child: AddTaskScreen(
                   addTaskCallback: (title) {
                     setState(() {
-                      tasks.add(
-                        Task(
-                          name: title,
-                        ),
-                      );
+//                      tasks.add(
+//                        Task(
+//                          name: title,
+//                        ),
+//                      );
                     });
                     Navigator.pop(context);
                   },
@@ -100,7 +100,7 @@ class _TasksScreenState extends State<TasksScreen> {
                 ),
               ),
               child: TasksList(
-                tasks: tasks,
+                tasks: Provider.of<TaskData>(context).tasks,
               ),
             ),
           ),
