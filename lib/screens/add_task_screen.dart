@@ -6,6 +6,8 @@ class AddTaskScreen extends StatefulWidget {
 }
 
 class _AddTaskScreenState extends State<AddTaskScreen> {
+  String title;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -33,6 +35,11 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
             TextField(
               autofocus: true,
               textAlign: TextAlign.center,
+              onChanged: (value) {
+                setState(() {
+                  title = value;
+                });
+              },
             ),
             SizedBox(
               height: 10.0,
