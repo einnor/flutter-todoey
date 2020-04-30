@@ -22,8 +22,8 @@ class TaskData with ChangeNotifier {
     notifyListeners();
   }
 
-  void toggleDone(value, index) {
+  void updateTask(index) {
     _tasks[index].toggleDone();
-    notifyListeners();t
+    notifyListeners();
   }
 }

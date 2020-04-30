@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:fluttertodoey/models/task_data.dart';
 
 class TaskTile extends StatelessWidget {
   final bool isChecked;
@@ -21,7 +23,9 @@ class TaskTile extends StatelessWidget {
       trailing: Checkbox(
         activeColor: Colors.lightBlueAccent,
         value: isChecked,
-        onChanged: onChanged,
+        onChanged: (value) {
+          Provider.of<TaskData>(context).updateTask(index);
+        },
       ),
     );
   }
