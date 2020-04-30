@@ -11,4 +11,11 @@ class TaskData with ChangeNotifier {
   int get tasksCount {
     return tasks.length;
   }
+
+  void addTask(title) {
+    tasks.add(
+      Task(name: title),
+    );
+    notifyListeners();
+  }
 }
