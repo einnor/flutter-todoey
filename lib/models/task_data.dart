@@ -13,9 +13,7 @@ class TaskData with ChangeNotifier {
   }
 
   void addTask(title) {
-    tasks.add(
-      Task(name: title),
-    );
+    tasks.add(Task(name: title));
     notifyListeners();
   }
 }
