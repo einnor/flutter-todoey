@@ -7,10 +7,21 @@ class TaskTile extends StatelessWidget {
       title: Text(
         'This is a task',
       ),
-      trailing: Checkbox(
-        activeColor: Colors.lightBlueAccent,
-        value: false,
-      ),
+      trailing: TaskCheckbox(),
+    );
+  }
+}
+
+class TaskCheckbox extends StatelessWidget {
+  const TaskCheckbox({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Checkbox(
+      activeColor: Colors.lightBlueAccent,
+      value: false,
     );
   }
 }
