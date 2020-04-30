@@ -3,12 +3,11 @@ import 'package:flutter/material.dart';
 class TaskTile extends StatelessWidget {
   final bool isChecked;
   final String title;
-  final Function onChanged;
 
-  TaskTile(
-      {@required this.isChecked,
-      @required this.title,
-      @required this.onChanged});
+  TaskTile({
+    @required this.isChecked,
+    @required this.title,
+  });
 
   @override
   Widget build(BuildContext context) {

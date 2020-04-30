@@ -14,11 +14,6 @@ class TasksList extends StatelessWidget {
             return TaskTile(
               title: taskData.tasks[index].name,
               isChecked: taskData.tasks[index].isDone,
-              onChanged: (value) {
-//            setState(() {
-//              widget.tasks[index].toggleDone();
-//            });
-              },
             );
           },
         );
