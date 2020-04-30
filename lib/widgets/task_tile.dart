@@ -21,7 +21,7 @@ class TaskTile extends StatelessWidget {
         activeColor: Colors.lightBlueAccent,
         value: task.isDone,
         onChanged: (value) {
-          Provider.of<TaskData>(context).updateTask(task);
+          Provider.of<TaskData>(context, listen: false).updateTask(task);
         },
       ),
     );
