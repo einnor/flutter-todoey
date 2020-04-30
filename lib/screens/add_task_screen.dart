@@ -22,7 +22,10 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
           children: <Widget>[
             Text(
               'Add Task',
-              style: TextStyle(),
+              style: TextStyle(
+                fontSize: 30.0,
+                color: Colors.lightBlueAccent,
+              ),
             ),
             TextField(),
             FlatButton(
