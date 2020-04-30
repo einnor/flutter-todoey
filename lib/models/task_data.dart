@@ -3,14 +3,8 @@ import 'task.dart';
 
 class TaskData with ChangeNotifier {
   List<Task> tasks = [
-    Task(
-      name: 'Buy milk',
-    ),
-    Task(
-      name: 'Buy eggs',
-    ),
-    Task(
-      name: 'Buy bread',
-    ),
+    Task(name: 'Buy milk'),
+    Task(name: 'Buy eggs'),
+    Task(name: 'Buy bread'),
   ];
 }
