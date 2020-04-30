@@ -11,7 +11,7 @@ class TasksScreen extends StatelessWidget {
         onPressed: () {
           showModalBottomSheet(
             context: context,
-            builder: (BuildContext context) => Container(),
+            builder: (context) => Container(),
           );
         },
         child: Icon(
