@@ -33,8 +33,10 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
             ),
             FlatButton(
               onPressed: () {},
+              color: Colors.lightBlueAccent,
               child: Text(
                 'Add',
+                style: TextStyle(),
               ),
             ),
           ],
