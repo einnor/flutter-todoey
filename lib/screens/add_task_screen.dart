@@ -1,18 +1,14 @@
 import 'package:flutter/material.dart';
 
-class AddTaskScreen extends StatefulWidget {
+class AddTaskScreen extends StatelessWidget {
   final Function addTaskCallback;
+
   AddTaskScreen({@required this.addTaskCallback});
 
   @override
-  _AddTaskScreenState createState() => _AddTaskScreenState();
-}
-
-class _AddTaskScreenState extends State<AddTaskScreen> {
-  String title;
-
-  @override
   Widget build(BuildContext context) {
+    String title;
+
     return Container(
       color: Color(0xFF757575),
       child: Container(
@@ -39,9 +35,7 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
               autofocus: true,
               textAlign: TextAlign.center,
               onChanged: (value) {
-                setState(() {
-                  title = value;
-                });
+                title = value;
               },
             ),
             SizedBox(
@@ -56,7 +50,7 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
                 ),
               ),
               onPressed: () {
-                widget.addTaskCallback(title);
+                addTaskCallback(title);
               },
             ),
           ],
