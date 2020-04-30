@@ -38,11 +38,13 @@ class _TasksScreenState extends State<TasksScreen> {
                 ),
                 child: AddTaskScreen(
                   addTaskCallback: (title) {
-                    tasks.add(
-                      Task(
-                        name: title,
-                      ),
-                    );
+                    setState(() {
+                      tasks.add(
+                        Task(
+                          name: title,
+                        ),
+                      );
+                    });
                   },
                 ),
               ),
