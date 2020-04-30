@@ -1,4 +1,5 @@
 import 'package:flutter/foundation.dart';
+import 'dart:collection';
 import 'task.dart';
 
 class TaskData with ChangeNotifier {
@@ -12,8 +13,8 @@ class TaskData with ChangeNotifier {
     return _tasks.length;
   }
 
-  List<Task> get tasks {
-    return _tasks;
+  UnmodifiableListView<Task> get tasks {
+    return UnmodifiableListView(_tasks);
   }
 
   void addTask(title) {
