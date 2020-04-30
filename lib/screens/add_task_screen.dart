@@ -27,7 +27,9 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
                 color: Colors.lightBlueAccent,
               ),
             ),
-            TextField(),
+            TextField(
+              autofocus: true,
+            ),
             FlatButton(
               onPressed: () {},
               child: Text(
