@@ -2,15 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'add_task_screen.dart';
 import 'package:fluttertodoey/widgets/tasks_list.dart';
-import 'package:fluttertodoey/models/task.dart';
 import 'package:fluttertodoey/models/task_data.dart';
 
-class TasksScreen extends StatefulWidget {
-  @override
-  _TasksScreenState createState() => _TasksScreenState();
-}
-
-class _TasksScreenState extends State<TasksScreen> {
+class TasksScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,13 +22,13 @@ class _TasksScreenState extends State<TasksScreen> {
                 ),
                 child: AddTaskScreen(
                   addTaskCallback: (title) {
-                    setState(() {
+//                    setState(() {
 //                      tasks.add(
 //                        Task(
 //                          name: title,
 //                        ),
 //                      );
-                    });
+//                    });
                     Navigator.pop(context);
                   },
                 ),
