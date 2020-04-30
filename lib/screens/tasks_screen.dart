@@ -45,6 +45,7 @@ class _TasksScreenState extends State<TasksScreen> {
                         ),
                       );
                     });
+                    Navigator.pop(context);
                   },
                 ),
               ),
