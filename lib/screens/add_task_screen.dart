@@ -29,6 +29,7 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
             ),
             TextField(
               autofocus: true,
+              textAlign: TextAlign.center,
             ),
             FlatButton(
               onPressed: () {},
