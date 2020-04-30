@@ -8,34 +8,40 @@ class TaskTile extends StatefulWidget {
 class _TaskTileState extends State<TaskTile> {
   bool isChecked = false;
 
+  void toggleCheckbox(value) {
+    setState(() {
+      isChecked = value;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return ListTile(
       title: Text(
         'This is a task',
         style: TextStyle(
-          decoration: TextDecoration.lineThrough,
+          decoration: isChecked ? TextDecoration.lineThrough : null,
         ),
       ),
-      trailing: TaskCheckbox(isChecked),
+      trailing: TaskCheckbox(
+        isChecked: isChecked,
+        onChanged: toggleCheckbox,
+      ),
     );
   }
 }
 
 class TaskCheckbox extends StatelessWidget {
-  TaskCheckbox(this.isChecked);
+  TaskCheckbox({@required this.isChecked, @required this.onChanged});
   final bool isChecked;
+  final Function onChanged;
 
   @override
   Widget build(BuildContext context) {
     return Checkbox(
       activeColor: Colors.lightBlueAccent,
       value: isChecked,
-      onChanged: (value) {
-//        setState(() {
-//          isChecked = value;
-//        });
-      },
+      onChanged: (value) => onChanged(value),
     );
   }
 }
