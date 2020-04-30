@@ -24,6 +24,13 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
               'Add Task',
               style: TextStyle(),
             ),
+            TextField(),
+            FlatButton(
+              onPressed: () {},
+              child: Text(
+                'Add',
+              ),
+            ),
           ],
         ),
       ),
