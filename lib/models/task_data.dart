@@ -2,18 +2,22 @@ import 'package:flutter/foundation.dart';
 import 'task.dart';
 
 class TaskData with ChangeNotifier {
-  List<Task> tasks = [
+  List<Task> _tasks = [
     Task(name: 'Buy milk'),
     Task(name: 'Buy eggs'),
     Task(name: 'Buy bread'),
   ];
 
   int get tasksCount {
-    return tasks.length;
+    return _tasks.length;
+  }
+
+  List<Task> get tasks {
+    return _tasks;
   }
 
   void addTask(title) {
-    tasks.add(Task(name: title));
+    _tasks.add(Task(name: title));
     notifyListeners();
   }
 }
