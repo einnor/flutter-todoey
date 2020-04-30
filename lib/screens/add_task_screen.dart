@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 class AddTaskScreen extends StatefulWidget {
+  final Function addTaskCallback;
+  AddTaskScreen({@required this.addTaskCallback});
+
   @override
   _AddTaskScreenState createState() => _AddTaskScreenState();
 }
@@ -45,7 +48,6 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
               height: 10.0,
             ),
             FlatButton(
-              onPressed: () {},
               color: Colors.lightBlueAccent,
               child: Text(
                 'Add',
@@ -53,6 +55,9 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
                   color: Colors.white,
                 ),
               ),
+              onPressed: () {
+                widget.addTaskCallback(title);
+              },
             ),
           ],
         ),
