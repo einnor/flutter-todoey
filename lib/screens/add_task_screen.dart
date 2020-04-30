@@ -35,7 +35,7 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
               textAlign: TextAlign.center,
             ),
             SizedBox(
-              height: 20.0,
+              height: 10.0,
             ),
             FlatButton(
               onPressed: () {},
