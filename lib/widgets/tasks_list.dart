@@ -9,7 +9,7 @@ class TasksList extends StatelessWidget {
     return Consumer<TaskData>(
       builder: (context, taskData, _) {
         return ListView.builder(
-          itemCount: taskData.tasks.length,
+          itemCount: taskData.tasksCount,
           itemBuilder: (context, index) {
             return TaskTile(
               title: taskData.tasks[index].name,
