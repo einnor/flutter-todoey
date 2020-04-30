@@ -9,7 +9,10 @@ class TasksScreen extends StatelessWidget {
         children: <Widget>[
           Icon(
             Icons.list,
-          )
+          ),
+          Text(
+            'Todoey',
+          ),
         ],
       ),
     );
