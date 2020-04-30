@@ -18,6 +18,14 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
             topRight: Radius.circular(20.0),
           ),
         ),
+        child: Column(
+          children: <Widget>[
+            Text(
+              'Add Task',
+              style: TextStyle(),
+            ),
+          ],
+        ),
       ),
     );
   }
