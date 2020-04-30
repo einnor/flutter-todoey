@@ -36,7 +36,9 @@ class _AddTaskScreenState extends State<AddTaskScreen> {
               color: Colors.lightBlueAccent,
               child: Text(
                 'Add',
-                style: TextStyle(),
+                style: TextStyle(
+                  color: Colors.white,
+                ),
               ),
             ),
           ],
