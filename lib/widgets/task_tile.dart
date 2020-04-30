@@ -14,13 +14,13 @@ class _TaskTileState extends State<TaskTile> {
       title: Text(
         'This is a task',
       ),
-      trailing: TaskCheckbox(),
+      trailing: TaskCheckbox(isChecked),
     );
   }
 }
 
 class TaskCheckbox extends StatelessWidget {
-  TaskCheckbox({this.checkboxState});
+  TaskCheckbox(this.checkboxState);
   final bool checkboxState;
 
   @override
